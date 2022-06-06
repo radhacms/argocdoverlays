@@ -1,5 +1,5 @@
 resources:
-- git@github-lvs.corpzone.internalzone.com:newco/cdbase-telemetry.git//telemetry/prometheus?ref=feature/replacement
+- https://github.com/radhacms/argocd.git//telemetry/prometheus?ref=main
 
 configMapGenerator:
 - envs:
@@ -7,8 +7,8 @@ configMapGenerator:
   name: env-configmap
 
 components:
-- git@github-lvs.corpzone.internalzone.com:newco/cdbase-telemetry.git//telemetry/common?ref=feature/replacement
-- ../../components/us-west-2
+- https://github.com/radhacms/argocd.git//telemetry/common?ref=main
+- ../components/us-west-2
 
 patchesStrategicMerge:
 - uswest2-netpol-patch.yaml
