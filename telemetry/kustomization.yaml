@@ -1,0 +1,15 @@
+resources:
+- git@github-lvs.corpzone.internalzone.com:newco/cdbase-telemetry.git//telemetry/prometheus?ref=feature/replacement
+
+configMapGenerator:
+- envs:
+  - config/env.properties
+  name: env-configmap
+
+components:
+- git@github-lvs.corpzone.internalzone.com:newco/cdbase-telemetry.git//telemetry/common?ref=feature/replacement
+- ../../components/us-west-2
+
+patchesStrategicMerge:
+- uswest2-netpol-patch.yaml
+

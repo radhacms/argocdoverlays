@@ -1,0 +1,8 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: awsuswest2-network-policy
+spec:
+  podSelector:
+    matchExpressions:
+    - {key: app, operator: In, values: [grafcharm, telemetry-awscostexporter, thanos-compact, thanos-store]}
