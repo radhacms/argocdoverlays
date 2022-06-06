@@ -313,7 +313,7 @@ spec:
       value: "500"
     - name: PROMETHEUS_ETCD_CONFIG_INTERNAL_DIR
       value: /etc/prometheus/config_out/tgroups
-    image: 094616488316.dkr.ecr.us-west-2.amazonaws.com/vnext/promoted/telemetry/etcdmetrics:2.0.0
+    image: 477484470770.dkr.ecr.us-west-2.amazonaws.com/vnext/promoted/telemetry/etcdmetrics:2.0.0
     name: etcdmetrics
     volumeMounts:
     - mountPath: /etc/prometheus/config_out
@@ -323,7 +323,7 @@ spec:
     env_purpose: dev
     prometheus_env: testreplace-telemetry
   externalUrl: http://localhost:8001/api/v1/namespaces/testreplace-telemetry/services/prometheuslb/proxy/
-  image: 094616488316.dkr.ecr.us-west-2.amazonaws.com/vnext/promoted/telemetry/prometheus_official:2.0.0
+  image: 477484470770.dkr.ecr.us-west-2.amazonaws.com/vnext/promoted/telemetry/prometheus_official:2.0.0
   podMetadata:
     annotations:
       prometheus.io/port: "9090"
@@ -366,7 +366,7 @@ spec:
             storage: 100Gi
         storageClassName: standard-encrypted-zones
   thanos:
-    baseImage: 094616488316.dkr.ecr.us-west-2.amazonaws.com/vnext/promoted/telemetry/thanos:2.0.0
+    baseImage: 477484470770.dkr.ecr.us-west-2.amazonaws.com/vnext/promoted/telemetry/thanos:2.0.0
     objectStorageConfig:
       key: thanos.yaml
       name: thanos-objstore

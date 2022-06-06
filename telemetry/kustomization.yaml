@@ -1,5 +1,5 @@
 resources:
-- https://github.com/radhacms/argocd.git//telemetry/prometheus?ref=main
+- https://github.com/radhacms/argocd//telemetry/prometheus?ref=main
 
 configMapGenerator:
 - envs:
@@ -7,7 +7,7 @@ configMapGenerator:
   name: env-configmap
 
 components:
-- https://github.com/radhacms/argocd.git//telemetry/common?ref=main
+- https://github.com/radhacms/argocd//telemetry/common?ref=main
 - ../components/us-west-2
 
 patchesStrategicMerge:
